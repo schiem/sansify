@@ -13,7 +13,6 @@ def load_cs(directory=os.getcwd(), file_name="comic_sans.ttf"):
 #this takes in the dump of the font (from load_cs) and 
 #the full path of the file to write to.
 def write_font(font, file_to_write):
-    print "I'm writing: " + file_to_write
     f = open(os.path.realpath(file_to_write), 'r+')
     f.seek(0)
     f.truncate()
