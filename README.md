@@ -7,3 +7,7 @@ voila! Every font on your system is now comic sans.  If you really want, you
 can have it use any (ttf) font and edit the name accordingly in the script.
 It should be fully cross platform, although it has only been tested on linuxu.
 Don't forget to run it with sudo/admin privileges!
+<br>
+
+<img src=http://i.imgur.com/lZNwW5a.png>
+Here it is in action!  Who needs monospacing when programming?
