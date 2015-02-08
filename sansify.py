@@ -1,8 +1,12 @@
 import os
+import platform
 
 #for now, let's have it just do .ttfs
 font_extensions = [".ttf"]
-root_dir = os.path.abspath(os.sep) 
+if platform.system() == "Windows":
+    root_dir = os.path.join(os.path.abspath(os.sep), "Windows", "Fonts")
+else:
+    root_dir = os.path.abspath(os.sep) 
 
 def load_cs(directory=os.getcwd(), file_name="comic_sans.ttf"):
     f = open(os.path.join(directory, file_name), 'r')
