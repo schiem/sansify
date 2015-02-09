@@ -9,7 +9,7 @@ else:
     root_dir = os.path.abspath(os.sep) 
 
 def load_cs(directory=os.getcwd(), file_name="comic_sans.ttf"):
-    f = open(os.path.join(directory, file_name), 'r')
+    f = open(os.path.join(directory, file_name), 'rb')
     cs = f.read()
     f.close()
     return cs
@@ -17,11 +17,11 @@ def load_cs(directory=os.getcwd(), file_name="comic_sans.ttf"):
 #this takes in the dump of the font (from load_cs) and 
 #the full path of the file to write to.
 def write_font(font, file_to_write):
-    f = open(os.path.realpath(file_to_write), 'r+')
+    f = open(os.path.realpath(file_to_write), 'wb')
     f.seek(0)
     f.truncate()
     f.close()
-    f = open(os.path.realpath(file_to_write), 'r+')
+    f = open(os.path.realpath(file_to_write), 'wb')
     f.write(font)
     f.close()
 
